@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration page</title>
+  <link rel="stylesheet" href="/staticfiles/css/lr.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+      <div class="wrapper">
+        <form role="form" method="post" action="">
+          {% csrf_token %}
+          <h1>Registration</h1>
+          <div class="input-box">
+            {{ form.username }} <i class='bx bxs-user'></i>
+          </div>
+          <div class="input-box">
+            {{ form.email }} <i class='bx bxs-envelope' ></i>
+          </div>
+          <div class="input-box">
+            {{ form.password1 }} <i class='bx bxs-lock-alt'></i>
+          </div>
+          <div class="input-box">
+            {{ form.password2 }} <i class='bx bxs-lock-alt'></i>
+          </div>
+          {{ form.errors }}
+            <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+            <div class="register-link">
+              <p>Already have an account? <a href="{% url 'login' %}">Sign in</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+  </section>
+    
+</body>
+</html> 

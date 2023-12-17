@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home page</title>
+  <link rel="stylesheet" href="/staticfiles/css/style.css"/>
+  <!-- Unicons -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <h4 class="nav_logo">TravelTime</h4>
+  
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a href="{% url 'video' %}" class="nav_link">Video</a>
+          <a href="{% url 'map' %}" class="nav_link">Map</a>
+        </li>
+      </ul>
+      
+      <a href="{% url 'login' %}" class="button">Sign in</a>
+
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <section class="home"></section>
+</body>
+</html> 
