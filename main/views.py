@@ -68,10 +68,8 @@ def user_logout(request):
 
 @login_required
 def profile(request):
-    # Получение стран, связанных с текущим пользователем
     user_countries = Country.objects.filter(user=request.user)
 
-    # Обработка POST-запроса для добавления новой страны
     if request.method == 'POST':
         form = CountryForm(request.POST)
         if form.is_valid():

@@ -2,7 +2,7 @@ const tooltip = document.querySelector('.tooltip');
 const countries = document.querySelectorAll('.country');
 const popupBg = document.querySelector('.info__bg');
 const popup = document.querySelector('.info');
-let lastClickedCountry = null; // Variable to store the last-clicked country
+let lastClickedCountry = null; 
 
 countries.forEach(country => {
   country.addEventListener('click', function () {
@@ -10,7 +10,7 @@ countries.forEach(country => {
     popup.querySelector('.info__title').innerText = this.dataset.title;
     popup.querySelector('.info__describtion').innerText = this.dataset.describtion;
     popupBg.classList.add('active');
-    lastClickedCountry = country; // Update the last-clicked country
+    lastClickedCountry = country; 
   });
 
   country.addEventListener('mousemove', function (e) {
@@ -34,11 +34,11 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Update the last-clicked country on button click
 const wasHereButton = document.querySelector('.info .button');
 wasHereButton.addEventListener('click', function () {
   if (lastClickedCountry) {
-    lastClickedCountry.classList.add('selected-country'); // Highlight the last-clicked country
-    popupBg.classList.remove('active'); // Close the information window
+    lastClickedCountry.classList.add('selected-country');
+    popupBg.classList.remove('active'); 
   }
 });
+

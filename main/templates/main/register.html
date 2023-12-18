@@ -14,6 +14,7 @@
         <form role="form" method="post" action="">
           {% csrf_token %}
           <h1>Registration</h1>
+          {{ form.errors }}
           <div class="input-box">
             {{ form.username }} <i class='bx bxs-user'></i>
           </div>
@@ -26,7 +27,6 @@
           <div class="input-box">
             {{ form.password2 }} <i class='bx bxs-lock-alt'></i>
           </div>
-          {{ form.errors }}
             <button type="submit" class="btn btn-primary btn-block">Sign up</button>
             <div class="register-link">
               <p>Already have an account? <a href="{% url 'login' %}">Sign in</a></p>
